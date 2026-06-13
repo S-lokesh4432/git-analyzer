@@ -248,8 +248,7 @@ export default function ChangelogDashboard() {
       // 2. Poll the status lookup map mapping framework every 3 seconds
       const pollInterval = setInterval(async () => {
         try {
-          const statusResponse = await fetch(`http://localhost:8081/api/repositories/status/${targetRepoId}`);
-          
+          const statusResponse = await fetch(`https://git-analyzer-g5k4.onrender.com/api/repositories/status/${targetRepoId}`);          
           if (statusResponse.ok) {
             const statusData = await statusResponse.json();
             
