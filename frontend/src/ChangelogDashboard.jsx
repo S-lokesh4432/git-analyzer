@@ -221,7 +221,7 @@ export default function ChangelogDashboard() {
 
     try {
       // 1. Initial configuration request to Spring Boot
-      const response = await fetch('http://localhost:8081/api/repositories/analyze', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/repositories/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
